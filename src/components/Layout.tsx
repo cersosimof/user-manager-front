@@ -9,7 +9,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, darkMode, toggleTheme }) => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', width: '100vw' }}>
       <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
       <main style={{ flexGrow: 1, padding: '2rem' }}>
         {children}

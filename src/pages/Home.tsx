@@ -35,7 +35,7 @@ const Home: React.FC = () => {
       display: 'flex',
       flexDirection: 'column',
       height: '100vh',
-      width: '100vw',
+      width: '100%',
       ...themeStyles
     }}>
       <main style={contentStyles}>
