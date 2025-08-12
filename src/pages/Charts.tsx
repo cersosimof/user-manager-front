@@ -63,7 +63,7 @@ const Charts: React.FC = () => {
       {/* Gráfico de Torta */}
       <div style={cardStyle}>
         <div style={chartWrapper}>
-          <PieChart width={200} height={200}>
+          <PieChart width={400} height={250}>
             <Pie
               data={pieData}
               cx="50%"
@@ -91,7 +91,7 @@ const Charts: React.FC = () => {
       {/* Gráfico de Barras */}
       <div style={cardStyle}>
         <div style={chartWrapper}>
-          <BarChart width={250} height={200} data={barData}>
+          <BarChart width={400} height={200} data={barData}>
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
@@ -110,7 +110,7 @@ const Charts: React.FC = () => {
       {/* Gráfico de Líneas */}
       <div style={cardStyle}>
         <div style={chartWrapper}>
-          <LineChart width={250} height={200} data={lineData}>
+          <LineChart width={400} height={200} data={lineData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="mes" />
             <YAxis />
