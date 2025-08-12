@@ -13,7 +13,7 @@ const App: React.FC = () => {
       <Layout darkMode={darkMode} toggleTheme={toggleTheme}>
 <Routes>
   <Route path="/" element={<Home darkMode={darkMode} />} />
-  <Route path="/charts" element={<Charts darkMode={darkMode} />} />
+  <Route path="/charts" element={<Charts />} />
 </Routes>
       </Layout>
     </BrowserRouter>
