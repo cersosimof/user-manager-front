@@ -18,12 +18,18 @@ interface TableProps {
 const UserTable: React.FC<TableProps> = ({ data, darkMode }) => {
   const thStyle: React.CSSProperties = {
     padding: '12px',
-    textAlign: 'left'
+    textAlign: 'left',
+    backgroundColor: darkMode ? '#2a2a2a' : '#e0e0e0',
+    color: darkMode ? '#f4f4f4' : '#000',
+    borderBottom: `1px solid ${darkMode ? '#444' : '#ccc'}`
   };
 
   const tdStyle: React.CSSProperties = {
     padding: '10px',
-    textAlign: 'left'
+    textAlign: 'left',
+    borderBottom: `1px solid ${darkMode ? '#444' : '#ddd'}`,
+    backgroundColor: darkMode ? '#1e1e1e' : '#fff',
+    color: darkMode ? '#f4f4f4' : '#000'
   };
 
   return (
@@ -35,12 +41,13 @@ const UserTable: React.FC<TableProps> = ({ data, darkMode }) => {
       padding: '1rem',
       maxWidth: '1200px',
       width: '100%',
-      overflowX: 'auto'
+      overflowX: 'auto',
+      transition: 'all 0.3s ease'
     }}>
       <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>Usuarios Registrados</h2>
       <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: 'Arial, sans-serif' }}>
         <thead>
-          <tr style={{ backgroundColor: darkMode ? '#333' : '#e0e0e0' }}>
+          <tr>
             <th style={thStyle}>ID</th>
             <th style={thStyle}>Nombre</th>
             <th style={thStyle}>Email</th>
@@ -52,7 +59,7 @@ const UserTable: React.FC<TableProps> = ({ data, darkMode }) => {
         </thead>
         <tbody>
           {data.map((usuario) => (
-            <tr key={usuario.id} style={{ borderBottom: '1px solid #ddd' }}>
+            <tr key={usuario.id}>
               <td style={tdStyle}>{usuario.id}</td>
               <td style={tdStyle}>{usuario.nombre}</td>
               <td style={tdStyle}>{usuario.email}</td>

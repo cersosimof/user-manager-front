@@ -11,10 +11,10 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Layout darkMode={darkMode} toggleTheme={toggleTheme}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/charts" element={<Charts />} />
-        </Routes>
+<Routes>
+  <Route path="/" element={<Home darkMode={darkMode} />} />
+  <Route path="/charts" element={<Charts darkMode={darkMode} />} />
+</Routes>
       </Layout>
     </BrowserRouter>
   );
